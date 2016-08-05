@@ -1,7 +1,6 @@
 # WebRegBot Setup Instructions
 
-First, edit line 20 and 21 to include your myUSC username and password.
-
+First, edit line 20 and 21 to include your myUSC username and password:
 ```javascript
 this.fill(".login-form", {
 "j_username": "username",
@@ -11,7 +10,7 @@ this.fill(".login-form", {
 
 Next, make sure the course to be registered by the bot is in [myCourseBin](https://webreg.usc.edu/myCourseBin). 
 
-Afterwards, edit line 35 of webregbot.js to include your desired section number (e.g. 32026).
+Afterwards, edit line 35 of webregbot.js to include your desired section number (e.g. 32026):
 ```javascript
 casper.thenOpen('https://webreg.usc.edu/myCoursebin/SchdUnschRmv?		  act=Sched&section=32026', function() {
       this.echo('Scheduling Course');
@@ -19,21 +18,21 @@ casper.thenOpen('https://webreg.usc.edu/myCoursebin/SchdUnschRmv?		  act=Sched&s
 });
 ```
 
-[Install CasperJS](http://docs.casperjs.org/en/latest/installation.html)
+[Install CasperJS](http://docs.casperjs.org/en/latest/installation.html):
 ```bash
 brew install casperjs
 ```
 
-Edit line 2 of execute.sh to include the bot's directory
+Edit line 2 of execute.sh to include the directory where webregbot.js is located:
 ```bash
-nohup /usr/local/bin/casperjs /home/username/WebCronBot/itp.js | /usr/bin/tee -a /home/username/WebCronBot/log &
+nohup /usr/local/bin/casperjs /home/username/WebCronBot/webregbot.js | /usr/bin/tee -a /home/username/WebCronBot/log &
 ```
 
 Setup a Cron Job to run execute.sh by running:
 ```bash
 crontab -e
 ```
-Afterwards, write this line to run execute.sh every 10 minutes.
+Afterwards, write this line to run execute.sh every 10 minutes:
 ```bash
 */10 * * * * /home/username/WebCronBot/execute.sh
 ```

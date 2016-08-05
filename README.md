@@ -12,7 +12,7 @@ Next, make sure the course to be registered by the bot is in [myCourseBin](https
 
 Afterwards, edit line 35 of webregbot.js to include your desired section number (e.g. 32026):
 ```javascript
-casper.thenOpen('https://webreg.usc.edu/myCoursebin/SchdUnschRmv?		  act=Sched&section=32026', function() {
+casper.thenOpen('https://webreg.usc.edu/myCoursebin/SchdUnschRmv?act=Sched&section=32026', function() {
       this.echo('Scheduling Course');
       this.wait(1000);
 });

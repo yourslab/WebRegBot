@@ -41,7 +41,7 @@ casper.thenOpen('https://webreg.usc.edu/Terms/termSelect?term=20163', function()
 // Note: 32026 in the URL can be changed to any section number 
 // but make sure that the section is in myCourseBin
 casper.thenOpen('https://webreg.usc.edu/myCoursebin/SchdUnschRmv?act=Sched&section=32026', function() {
-	this.echo('Scheduling ITP 380');
+	this.echo('Scheduling Course');
 	this.wait(1000);
 });
 

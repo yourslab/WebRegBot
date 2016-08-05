@@ -28,11 +28,12 @@ Edit line 2 of execute.sh to include the directory where webregbot.js is located
 nohup /usr/local/bin/casperjs /home/username/WebCronBot/webregbot.js | /usr/bin/tee -a /home/username/WebCronBot/log &
 ```
 
-Setup a Cron Job to run execute.sh by running:
-```bash
-crontab -e
-```
-Afterwards, write this line to run execute.sh every 10 minutes:
+Edit this line to include the project's directory:
 ```bash
 */10 * * * * /home/username/WebCronBot/execute.sh
+```
+
+Setup a Cron Job by writing the line above after running:
+```bash
+crontab -e
 ```

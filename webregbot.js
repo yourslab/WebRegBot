@@ -1,6 +1,6 @@
 var casper = require('casper').create({
 	pageSettings: {
-		loadImages: false,//The script is much faster when this field is set to false
+		loadImages: false, //The script is much faster when this field is set to false
 		loadPlugins: false,
 		userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36'
 	}
@@ -14,7 +14,7 @@ casper.start("https://my.usc.edu", function() {
 	this.echo("Opening myUSC");
 });
 
-// IMPORTANT: Edit "username" and "password" to your 
+// IMPORTANT: Change "username" and "password" to your myUSC username and password
 casper.waitForSelector('.login-form', function() {
 	this.fill(".login-form", {
 	"j_username": "username",
